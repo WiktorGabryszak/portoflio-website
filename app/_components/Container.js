@@ -1,45 +1,59 @@
-import ProfileItem from "./ProfileItem";
+import ContainerBorder from "./ContainerBorder";
+import ContainerGrid from "./ContainerGrid";
+import ContainerHeader from "./ContainerHeader";
+import ProfileContainer from "./ProfileContainer";
+import ProjectsSlider from "./ProjectsSlider";
+import ServicesContainer from "./ServicesContainer";
+import Slider from "./Slider";
 
 export default function Container() {
 	return (
-		<div className='grid grid-cols-1 gap-4 h-fit'>
-			<div className='border shadow-sm rounded-xl border-borderColor bg-containerBG '>
-				<div className='p-6 pt-0 mt-5'>
-					<div className='flex flex-row items-center'>
-						<img src='/peta.jpg' width={100} height={100} className='rounded-2xl' />
-						<div className='flex flex-col ml-4 gap-y-1'>
-							<div className='flex mb-auto items-center justify-center py-1 px-2 bg-background rounded-2xl text-md gap-1 w-fit'>
-								<span className='text-md font-semibold text-gray-400'>Available to Work</span>
-							</div>
-							<h1 className='text-2xl font-bold text-accent px-2'>Wikor Gabryszak</h1>
-							<div className='text-md text-gray-400 font-semibold px-2'>
-								<div className='flex items-center gap-1'>
-									<p>I&apos;m a</p>
-									<span className='text-accent font-black ml-1'>(Here Animation)</span>
-								</div>
+		<>
+			<ContainerGrid>
+				<div className='border shadow-sm rounded-xl border-borderColor bg-containerBG'>
+					<ContainerHeader title='Projects' desc='Some procjuect i work on' />
+					<ProjectsSlider />
+					<ProjectsSlider />
+				</div>
+			</ContainerGrid>
+
+			<div className='grid grid-cols-1 gap-4 2xl:h-fit'>
+				<ServicesContainer />
+				<ProfileContainer />
+				<div className='grid grid-cols-2 gap-4'>
+					<ContainerBorder>
+						<div className='flex flex-col items-center justify-center gap-1 p-4 md:p-6'>
+							<p className='font-bold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-800'>
+								2
+							</p>
+							<div className='flex items-center justify-center gap-1 bg-background py-0.5 px-1 md:px-3 md:py-1.5 rounded-xl w-full'>
+								<span class='text-sm text-gray-400 font-semibold'>Projects</span>
 							</div>
 						</div>
-					</div>
-					<div className='flex flex-wrap gap-2 rounded-2xl py-5 max-w-[50vh]'>
-						<ProfileItem title='English & Polish' icon='' />
-						<ProfileItem title='Poland' icon='' />
-						<ProfileItem title='Sci-Fi Fan' icon='' />
-						<ProfileItem title='Freelancer' icon='' />
-					</div>
-					<div className='flex items-center gap-2'>
-						<button className='inline-flex items-center justify-center rounded-lg text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-accent text-background hover:bg-accent/90 h-10 px-4 py-2 w-full gap-1'>
-							Contact Me
-						</button>
-						<button className='inline-flex items-center justify-center rounded-lg text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-borderColor text-foreground hover:bg-background/90 h-10 px-4 py-2 w-full gap-1'>
-							GitHub
-						</button>
-
-						<button className='inline-flex items-center justify-center rounded-lg text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-green-400 text-background hover:bg-green-400/90 h-10 px-4 py-2 w-full gap-1'>
-							Linkedin
-						</button>
-					</div>
+					</ContainerBorder>
+					<ContainerBorder>
+						<div className='flex flex-col items-center justify-center gap-1 p-4 md:p-6'>
+							<p className='font-bold text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-800'>
+								2
+							</p>
+							<div className='flex items-center justify-center gap-1 bg-background py-0.5 px-1 md:px-3 md:py-1.5 rounded-xl w-full'>
+								<span class='text-sm text-gray-400 font-semibold'>Projects</span>
+							</div>
+						</div>
+					</ContainerBorder>
 				</div>
+				<ContainerBorder>
+					<div className='p-6 pt-0'>
+						<div className='flex flex-col justify-center items-center container mx-auto p-4'>
+							<h3 className='text-2xl font-sans font-bold my-2'>Let&apos;s work together</h3>
+							<p></p>
+							<button className='inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-green-400 text-background hover:bg-primary/90 h-10 px-4 py-2 w-full gap-1 mt-5'>
+								Get In Touch
+							</button>
+						</div>
+					</div>
+				</ContainerBorder>
 			</div>
-		</div>
+		</>
 	);
 }
