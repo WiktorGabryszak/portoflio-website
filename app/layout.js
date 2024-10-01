@@ -1,3 +1,4 @@
+import LeftContainer from "./_components/LeftContainer";
 import "./globals.css";
 
 export const metadata = {
@@ -8,7 +9,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={` antialiased`}>{children}</body>
+			<body>
+				<div className='flex justify-center items-center overflow-hidden px-4 relative pt-14'>
+					<div className="absolute top-0 border w-[200px] px-3 py-2 rounded-full border-zinc-700 my-2">
+						<ul className="flex justify-center items-center text-sm gap-8">
+							<li>Home</li>
+							<li>Home</li>
+						</ul>
+					</div>
+					<div className='flex justify-center max-2xl:flex-wrap gap-4 w-full overflow-y-auto'>
+						<LeftContainer />
+						{children}
+					</div>
+				</div>
+			</body>
 		</html>
 	);
 }

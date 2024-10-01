@@ -7,7 +7,6 @@ function ServicesContainer() {
 		<ContainerBorder>
 			<ContainerHeader title='Services' desc='Lorem ipsum dolor sit amet, consectetur adipiscing elit.' />
 			<Slider />
-			{/* <Slider /> */}
 		</ContainerBorder>
 	);
 }

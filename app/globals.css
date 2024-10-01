@@ -39,3 +39,13 @@ body {
 .services-slider {
 	animation: slider 30s forwards infinite linear;
 }
+
+
+.cyberBorder::before {
+	border-right: 18px solid transparent;
+	border-top: 18px solid #0D0C0D;
+	content: "";
+	position: absolute;
+	left: 1;
+	top: 2;
+}
