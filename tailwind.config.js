@@ -4,11 +4,6 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				background: "var(--background)",
-				foreground: "var(--foreground)",
-				containerBG: "var(--containerBG)",
-				borderColor: "var(--borderColor)",
-				accent: "var(--accent)",
 			},
 		},
 	},

@@ -1,5 +1,11 @@
-import LeftContainer from "./_components/LeftContainer";
+import { Nunito } from "next/font/google";
 import "./globals.css";
+
+const nunito = Nunito({
+	subsets: ["latin"],
+	display: "swap",
+	weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
 	title: "Portfolio - Wiktor Gabryszak",
@@ -9,18 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body>
-				<div className='flex justify-center items-center overflow-hidden px-4 relative pt-14'>
-					<div className="absolute top-0 border w-[200px] px-3 py-2 rounded-full border-zinc-700 my-2">
-						<ul className="flex justify-center items-center text-sm gap-8">
-							<li>Home</li>
-							<li>Home</li>
-						</ul>
-					</div>
-					<div className='flex justify-center max-2xl:flex-wrap gap-4 w-full overflow-y-auto'>
-						<LeftContainer />
-						{children}
-					</div>
+			<body className={`${nunito.className} bg-zinc-950`}>
+				<div className='flex min-h-screen w-auto'>
+					<div className='flex max-h-[1000px] min-h-[900px] items-center gap-5 p-10'>{children}</div>
 				</div>
 			</body>
 		</html>

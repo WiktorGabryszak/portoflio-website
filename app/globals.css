@@ -3,49 +3,8 @@
 @tailwind utilities;
 
 :root {
-	--background: #e6e9fe;
-	--foreground: #0d0c0d;
-	--containerBG: #0f0f10;
-	--borderColor: #27272a;
-	--accent: #4ade80;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0d0c0d;
-		--foreground: #e6e9fe;
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--background: #e6e9fe;
-		--foreground: #0d0c0d;
-	}
-}
-
-body {
-	color: var(--foreground);
-	background: var(--background);
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-@keyframes slider {
-	100% {
-		transform: translate(calc(-75% - 0.5rem));
-	}
-}
-
-.services-slider {
-	animation: slider 30s forwards infinite linear;
+	
 }
 
 
-.cyberBorder::before {
-	border-right: 18px solid transparent;
-	border-top: 18px solid #0D0C0D;
-	content: "";
-	position: absolute;
-	left: 1;
-	top: 2;
-}
+
