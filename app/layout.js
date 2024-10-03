@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 		<html lang='en'>
 			<body className={`${nunito.className} bg-zinc-950`}>
 				<div className='flex min-h-screen w-auto'>
-					<div className='flex max-h-[1000px] min-h-[900px] items-center gap-5 p-10'>{children}</div>
+					<div className='flex lg:max-h-[1000px] lg:min-h-[900px] items-center gap-5 lg:p-8 p-4'>{children}</div>
 				</div>
 			</body>
 		</html>
